@@ -1,8 +1,13 @@
 from transformers import AutoTokenizer, BartForConditionalGeneration
+from . import initiale
 
 
-model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
-tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
+class info:
+    state:int
+
+info.state=0
+
+(model,tokenizer) = initiale.downloadModel()
 
 
 def summarizer(test:str):

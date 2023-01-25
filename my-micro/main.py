@@ -1,8 +1,7 @@
-
-
 from fastapi import FastAPI
-from model import model
+from .model import model
 from pydantic import BaseModel
+
 app = FastAPI()
 
 class text(BaseModel):
@@ -10,10 +9,10 @@ class text(BaseModel):
 
 @app.get("/")
 async def read_root():
-    return "it's a text"
+    return model.info.state
 
 
-@app.get("/items/{item_id}")
+@app.get("/summarize")
 async def read_item(text:text):
     
     return {"text":model.summarizer(text.text)}
