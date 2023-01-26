@@ -1,1 +1,0 @@
-{"id":"43a0b1e8-3696-43f0-9587-20a5ce7857a3","space":39165,"runtime":"python3.9","name":"my-micro","path":"zaxlma","project":"a00y92eh","account":"144798365827","region":"eu-central-1","deps":["fastapi","transformers"],"envs":null,"public":true,"log_level":"debug","cron":""}
